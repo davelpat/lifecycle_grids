@@ -9,3 +9,11 @@ ggplot(orders, aes(x=recency)) +
   theme_bw() +
   geom_bar(alpha=0.6, binwidth=1) +
   ggtitle("Distribution by recency")
+
+ggplot(lcg, aes(x=client, y=quantity, fill=quantity)) +
+  theme_bw() +
+  theme(panel.grid = element_blank())+
+  geom_bar(stat='identity', alpha=0.6) +
+  geom_text(aes(y=max(quantity)/2, label=quantity), size=4) +
+  facet_grid(segm.freq ~ segm.rec) +
+  ggtitle("LifeCycle Grids")
