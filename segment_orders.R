@@ -10,7 +10,13 @@ orders.segm <- orders %>%
                   ifelse(between(recency, 14, 19), '14-19 days',
                   ifelse(between(recency, 20, 45), '20-45 days',
                   ifelse(between(recency, 46, 80), '46-80 days',
-                         '>80 days'))))))
+                         '>80 days')))))) %>%
+  # creating last cart feature
+  mutate(cart=paste(ifelse(a!=0, 'a', ''),
+                    ifelse(b!=0, 'b', ''),
+                    ifelse(c!=0, 'c', ''),
+                    sep='')) %>%
+  arrange(clientId)
 
 # defining order of boundaries
 orders.segm$segm.freq <- factor(orders.segm$segm.freq,
