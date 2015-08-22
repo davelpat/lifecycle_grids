@@ -24,3 +24,10 @@ ggplot(lcg.sub, aes(x=client, y=quantity, fill=gender)) +
   geom_bar(stat='identity', position='fill' , alpha=0.6) +
   facet_grid(segm.freq ~ segm.rec) +
   ggtitle("LifeCycle Grids by gender (proportion)")
+
+ggplot(lcg.sub, aes(x=gender, y=quantity, fill=cart)) +
+  theme_bw() +
+  theme(panel.grid = element_blank())+
+  geom_bar(stat='identity', position='fill' , alpha=0.6) +
+  facet_grid(segm.freq ~ segm.rec) +
+  ggtitle("LifeCycle Grids by gender and last cart (proportion)")
