@@ -1,10 +1,15 @@
-Code and Data from 
+### Code and Data from 
 
-Customer segmentation – LifeCycle Grids with R
-by Sergey Bryl
+## Customer segmentation – LifeCycle Grids with R
+### by Sergey Bryl
+
 http://analyzecore.com/2015/02/16/customer-segmentation-lifecycle-grids-with-r/
+
 bryl.serg@gmail.com 
+
 http://analyzecore.com
 
+
 Sergey highly recommends reading this blogpost by Jim Novo:
+
 http://blog.jimnovo.com/2007/04/25/engagement-customers/
